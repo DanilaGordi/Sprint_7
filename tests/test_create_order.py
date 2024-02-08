@@ -1,9 +1,7 @@
-import json
-
-import allure
 import pytest
+import json
+import allure
 import requests
-
 from data import EndpointsUrl
 
 @allure.feature('Создание заказа')
@@ -35,3 +33,4 @@ class TestMakeAnOrder:
 
 
         assert response.status_code == 201 and 'track' in response.json()
+
